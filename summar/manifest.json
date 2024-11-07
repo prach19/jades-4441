@@ -4,16 +4,6 @@
     "description": "Summarizes and simplifies provacy policies of e-commerce websites.",
     "version": "1.0",
     "icons": {},
-    "content_scripts": [
-        {
-            "js": [
-                "content-script.js"
-            ],
-            "matches": [
-                "http://*.amazon.*"
-            ]
-        }
-    ],
     "permissions": [
         "webNavigation"
     ],
