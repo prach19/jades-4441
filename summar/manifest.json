@@ -3,16 +3,24 @@
     "name": "Summar",
     "description": "Summarizes and simplifies provacy policies of e-commerce websites.",
     "version": "1.0",
-    "icons": {
-    },
+    "icons": {},
     "content_scripts": [
-      {
-        "js": [
-          "content-script.js"
-        ],
-        "matches": [
-          "http://*.amazon.*"
-        ]
-      }
-    ]
-  }
+        {
+            "js": [
+                "content-script.js"
+            ],
+            "matches": [
+                "http://*.amazon.*"
+            ]
+        }
+    ],
+    "permissions": [
+        "webNavigation"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
