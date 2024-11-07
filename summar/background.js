@@ -1,5 +1,6 @@
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === "complete" && tab.url && /amazon\./.test(tab.url)) {
-      chrome.action.openPopup();
+  chrome.webNavigation.onCompleted.addListener((details) => {
+    console.log("Navigation completed:", details.url);
+    if (/amazon\./.test(details.url)){
+        chrome.action.openPopup();
     }
   });
