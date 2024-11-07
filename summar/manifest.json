@@ -5,7 +5,22 @@
     "version": "1.0",
     "icons": {},
     "permissions": [
-        "webNavigation"
+        "webNavigation",
+        "tabs",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.amazon.com/*",
+                "*://*.amazon.co.uk/*",
+                "*://*.amazon.ca/*",
+                "*://*.amazon.de/*"
+            ],
+            "js": [
+                "content-scripts.js"
+            ]
+        }
     ],
     "action": {
         "default_popup": "index.html"
