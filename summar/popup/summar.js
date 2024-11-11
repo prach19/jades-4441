@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let rights = document.getElementById("rights");
     let retention = document.getElementById("retention");
     let storage = document.getElementById("storage");
+    let title = document.getElementById("title");
 
     //reference to content box
     let policyContent = document.getElementById("content");
@@ -38,6 +39,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     
+    window.onload = function() {setTitle()};
+
+    function setTitle() {
+        chrome.windows.getAll({populate:true},function(windows){
+            windows.forEach(function(window){
+              window.tabs.forEach(function(tab){
+          
+            
+                if(tab.url.startsWith("https://www.amazon.")) {
+                 title.innerHTML = "Amazon";
+                } else if (tab.url.startsWith("https://www.temu.")) {
+                    title.innerHTML = "Temu";
+                } else if (tab.url.startsWith("https://ca.shein.com/")) {
+                    title.innerHTML = "Shein";
+                }
+          
+              });
+            });
+          });
+    }
 
 
 });
