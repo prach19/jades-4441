@@ -6,9 +6,11 @@
     "icons": {},
     "permissions": [
         "webNavigation",
+        "webRequest",
         "tabs",
         "activeTab"
     ],
+
     "content_scripts": [
         {
             "matches": [

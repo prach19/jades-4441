@@ -1,27 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Amazon Popup</title>
-    
-    <style type="text/css">
-      body {
-        min-width: 250px; /* your desired width */
-        max-width: 100%;
-        position: relative;
-        vertical-align:middle;
-      }
-    </style>
-    <script src="summar.js"></script>
-  </head>
-  <body>
-    <h1 id="title">Test</h1>
 
-    <button id="collect" class="buttons">collection</button>
-    <button id="rights" class="buttons">rights</button>
-    <button id="retention" class="buttons">rentention</button>
-    <button id="storage" class="buttons">storage</button>
+<head>
+  <title>Popup</title>
 
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="summar.js"></script>
+</head>
+
+<body>
+
+  <div class="infoBar">
+
+    <div class="column">
+
+      <div class=info>
+        <button id="moreInfo" class="about">About</button>
+      </div>
+
+      <div class="externalLinks">
+        <a href="">Privacy Policy</a>
+        <a href="https://github.com/prach19/jades-4441">GitHub Repo</a>
+      </div>
+
+    </div>
+
+    <img id="logo" src="./imgs/logo.png" alt="Summar logo" />
+
+    <div class="search">
+
+      <img id="icon" src="./imgs/searchGlass.png" alt="Magnifying Glass" />
+      <h1 id="title">Test</h1>
+
+    </div>
+
+  </div>
+
+
+  <h2>Privacy Report</h2>
+
+  <div class="buttonBar">
+
+    <div class="row">
+      <button id="collect" class="buttons">
+
+        <p>Collection</p>
+        <img id="buttonIcon" src="./imgs/collection.png" alt="Collection" />
+
+      </button>
+      <button id="rights" class="buttons">
+
+        <p> Rights</p>
+        <img id="buttonIcon" src="./imgs/rights.png" alt="Rights" />
+      </button>
+    </div>
+
+    <div class="row">
+      <button id="retention" class="buttons">
+
+        <p>Rentention</p>
+        <img id="buttonIcon" src="./imgs/retention.png" alt="Retention" />
+
+      </button>
+      <button id="storage" class="buttons">
+
+        <p>Storage</p>
+        <img id="buttonIcon" src="./imgs/storage.png" alt="Storage" />
+
+      </button>
+    </div>
+
+  </div>
+  <div class="contentContiner">
+    <h2>Details</h2>
     <p id="content"></p>
-    <!-- <script src="summar.js"></script> -->
-  </body>
+  </div>
+
+  <!-- <script src="summar.js"></script> -->
+
+
+</body>
+
 </html>
