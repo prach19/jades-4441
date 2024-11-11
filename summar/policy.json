@@ -1,10 +1,24 @@
 [
     {
       "company": "Amazon",
-      "collection": "xyz",
-      "rights": "abc",
-      "retention": "123",
-      "storage": "mno"
+      "collection": "amazon collection",
+      "rights": "amazon rights",
+      "retention": "amazon retention",
+      "storage": "amazon storage"
+    },
+    {
+      "company": "Temu",
+      "collection": "temu collection",
+      "rights": "temu rights",
+      "retention": "temu retention",
+      "storage": "temu storage"
+    },
+    {
+      "company": "Shein",
+      "collection": "shein collection",
+      "rights": "shein rights",
+      "retention": "shein retention",
+      "storage": "shein storage"
     }
   ]
   

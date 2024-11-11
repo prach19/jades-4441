@@ -4,61 +4,75 @@ document.addEventListener("DOMContentLoaded", function () {
     let rights = document.getElementById("rights");
     let retention = document.getElementById("retention");
     let storage = document.getElementById("storage");
-    let title = document.getElementById("title");
 
+    //reference to title element
+    let title = document.getElementById("title");
     //reference to content box
     let policyContent = document.getElementById("content");
-    let amazonData = {};
 
+    //reference to data groups
+    let jsonData = {};
+
+    //fetching and storing json data
     fetch(chrome.runtime.getURL("policy.json"))
-    .then((response) => response.json())
-    .then((data) => {
-      // Store the first object in amazonData for easy access
-      amazonData = data[0];
-    })
-    .catch((error) => console.error("Error loading JSON:", error));
+        .then((response) => response.json())
+        .then((data) => {
+            //checking current tab, and chosing json data according to URL
+            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+                let currentURL = new URL(tabs[0].url);
+                if (/amazon\./.test(currentURL)) {
+                    jsonData = data[0];
+                }
+                //testing if URL matches temu
+                else if (/temu\./.test(currentURL)) {
+                    jsonData = data[1];
+                }
+                //testing if URL matches shein
+                else if (/shein\./.test(currentURL)) {
+                    jsonData = data[2];
+                }
+            });
+        })
+        .catch((error) => console.error("Error loading JSON:", error));
 
-    //functionality for rights button
+    //functionality for collection button
     collection.addEventListener("click", function () {
-        policyContent.textContent = amazonData.collection;
+        policyContent.textContent = jsonData.collection;
     });
 
     //functionality for rights button
     rights.addEventListener("click", function () {
-        policyContent.textContent = amazonData.rights;
+        policyContent.textContent = jsonData.rights;
     });
 
     // functionality for retention button
     retention.addEventListener("click", function () {
-        policyContent.textContent = amazonData.retention;
+        policyContent.textContent = jsonData.retention;
     });
 
     // functionality for storage button
     storage.addEventListener("click", function () {
-        policyContent.textContent = amazonData.storage;
+        policyContent.textContent = jsonData.storage;
     });
 
-    
-    window.onload = function() {setTitle()};
-
+    //changing title based on URL
+    window.onload = function () { setTitle() };
     function setTitle() {
-        chrome.windows.getAll({populate:true},function(windows){
-            windows.forEach(function(window){
-              window.tabs.forEach(function(tab){
-          
-            
-                if(tab.url.startsWith("https://www.amazon.")) {
-                 title.innerHTML = "Amazon";
-                } else if (tab.url.startsWith("https://www.temu.")) {
-                    title.innerHTML = "Temu";
-                } else if (tab.url.startsWith("https://ca.shein.com/")) {
-                    title.innerHTML = "Shein";
-                }
-          
-              });
+        chrome.windows.getAll({ populate: true }, function (windows) {
+            windows.forEach(function (window) {
+                window.tabs.forEach(function (tab) {
+                    let url = new URL(tab.url);
+
+                    if (/amazon\./.test(url)) {
+                        title.innerHTML = "Amazon";
+                    } else if (/temu\./.test(url)) {
+                        title.innerHTML = "Temu";
+                    } else if (/shein\./.test(url)) {
+                        title.innerHTML = "Shein";
+                    }
+
+                });
             });
-          });
+        });
     }
-
-
 });
