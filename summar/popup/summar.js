@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    //reference to colours
+    let darkOrange = "#CC7626";
+    let lightOrange = "#EBA886";
+
+
+
     // references to buttons
     let collection = document.getElementById("collect");
     let rights = document.getElementById("rights");
@@ -38,21 +45,25 @@ document.addEventListener("DOMContentLoaded", function () {
     //functionality for collection button
     collection.addEventListener("click", function () {
         policyContent.textContent = jsonData.collection;
+        changeBtnColour("Collection");
     });
 
     //functionality for rights button
     rights.addEventListener("click", function () {
         policyContent.textContent = jsonData.rights;
+        changeBtnColour("Rights");
     });
 
     // functionality for retention button
     retention.addEventListener("click", function () {
         policyContent.textContent = jsonData.retention;
+        changeBtnColour("Retention");
     });
 
     // functionality for storage button
     storage.addEventListener("click", function () {
         policyContent.textContent = jsonData.storage;
+        changeBtnColour("Storage");
     });
 
     //changing title based on URL
@@ -77,5 +88,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
         });
+    }
+
+    function changeBtnColour(buttonName) {
+        collection.style.backgroundColor = lightOrange;
+        rights.style.backgroundColor = lightOrange;
+        retention.style.backgroundColor = lightOrange;
+        storage.style.backgroundColor = lightOrange;
+        switch (buttonName) {
+            case "Collection":
+                collection.style.backgroundColor = darkOrange;
+
+                break;
+            case "Rights":
+                rights.style.backgroundColor = darkOrange;
+                break;
+            case "Retention":
+                retention.style.backgroundColor = darkOrange;
+                break;
+            case "Storage":
+                storage.style.backgroundColor = darkOrange;
+                break;
+        }
     }
 });
