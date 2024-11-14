@@ -1,10 +1,30 @@
 [
   {
     "company": "Amazon",
-    "collection": "collection",
-    "rights": "amazon rights",
-    "retention": "amazon retention",
-    "storage": "amazon storage"
+    "collection": [
+      "Account Creation & Management: Email, address, password, age, location",
+      "To Fulfill & Process Orders: Name, phone #, shipping address, financial information, IP address",
+      "Communication history with Amazon support (chat logs, email, phone #, social media, etc.)",
+      "Photographs uploaded to the service that were sent for product reviews",
+      "Information and documents regarding identity, including Social Insurance Numbers and driver's license numbers;",
+      "Marketing, Advertising, & Other Promotional Activities: Cookies and engagement data (browsing activity, items added to cart, saved items, orders placed & returns), information saved in your Contacts (people, addresses and phone numbers)",
+      "Improve Services: Device metrics (such as when a device is in use, application usage, connectivity data, and any errors or event failures), voluntary information (body shape, height, chest/waist/hip circumference, etc.), voice recordings when you speak to Alexa",
+      "To Prevent & Investigate Fraud: Log-in data (browser type, device information, operating system, account setting information)"
+    ],
+    "rights": [
+      "Access, correct, and delete personal information within the site/app or contact Amazon's Privacy Center",
+      "Unsubscribe from marketing communications prevents Amazon from using your email account.",
+      "Any privacy disputes are subject to the application of the law of the state of Washington."
+    ],
+    "retention": [
+      "Amazon retrains information for “as long as necessary” for the purposes defined in its policy",
+      "Amazon follows the Payment Card Industry Data Security Standard (PCI DSS) when handling credit card data.",
+      "Amazon may occasionally request proof of identity before disclosing personal information."
+    ],
+    "storage": [
+      "Amazon transfers data outside of Canada as permitted by applicable laws on data protection.",
+      "Amazon can disclose account and other personal information when necessary to comply with the law"
+    ]
   },
   {
     "company": "Temu",
@@ -21,7 +41,7 @@
       "Can submit a request to view data collected by Temu",
       "Can withdraw consent for Temu to use personal information, which results in Temu revoking its services",
       "Unsubscribe from marketing communications",
-      "Right To Be Forgotten: Users may request to be de-indexed from any hyperlinks associated with the user’s name.  Likewise, users can request to be re-indexed."
+      "Right To Be Forgotten: Users may request to be de-indexed from any hyperlinks associated with the user's name.  Likewise, users can request to be re-indexed."
     ],
     "retention": [
       "Temu follows the Payment Card Industry Security Standard (CPI-DSS) in handling credit card information.",
@@ -44,10 +64,10 @@
       "Marketing, Advertising, & Other Promotional Activities: Cookies and engagement data (browsing activity, items added to cart, saved items, orders placed & returns)",
       "Improve Services: Device information, voluntary information (body shape, height, chest/waist/hip circumference, etc.)",
       "To Prevent & Investigate Fraud: Log-in data (browser type, device information, operating system, account setting information)",
-      "Profile data is collected unless the user’s account is deleted through SHEIN’s privacy centre."
+      "Profile data is collected unless the user's account is deleted through SHEIN's privacy centre."
     ],
     "rights": [
-      "Access, correct, and delete personal information within the site/app or contact SHEIN’s Privacy Center",
+      "Access, correct, and delete personal information within the site/app or contact SHEIN's Privacy Center",
       "SHEIN may NOT accommodate a request to delete or change information if the company believes it would violate any law or legal requirement",
       "Unsubscribe from marketing communications prevents SHEIN from using your email account.",
       "Lodging complaints"

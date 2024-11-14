@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //functionality for collection button
     collection.addEventListener("click", function () {
-        policyContent.innerHTML="";
+        policyContent.innerHTML = "";
         let collectionContent = jsonData.collection;
         collectionContent.forEach((policy) => {
             let listItem = document.createElement("li"); // create a new <li> element
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //functionality for rights button
     rights.addEventListener("click", function () {
-        policyContent.innerHTML="";
+        policyContent.innerHTML = "";
         let rightsContent = jsonData.rights;
         rightsContent.forEach((policy) => {
             let listItem = document.createElement("li"); // create a new <li> element
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // functionality for retention button
     retention.addEventListener("click", function () {
-        policyContent.innerHTML="";
+        policyContent.innerHTML = "";
         let retentionContent = jsonData.retention;
         retentionContent.forEach((policy) => {
             let listItem = document.createElement("li"); // create a new <li> element
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // functionality for storage button
     storage.addEventListener("click", function () {
-        policyContent.innerHTML="";
+        policyContent.innerHTML = "";
         let storageContent = jsonData.storage;
         storageContent.forEach((policy) => {
             let listItem = document.createElement("li"); // create a new <li> element
@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
             windows.forEach(function (window) {
                 window.tabs.forEach(function (tab) {
                     let url = new URL(tab.url);
-
                     if (/amazon\./.test(url)) {
                         title.innerHTML = "Amazon";
                     } else if (/temu\./.test(url)) {

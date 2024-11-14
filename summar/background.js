@@ -1,5 +1,5 @@
 chrome.webNavigation.onCompleted.addListener((details) => {
-  console.log("Navigation completed:", details.url);
+  //console.log("Navigation completed:", details.url);
   urlChecker(details.url);
 });
 
