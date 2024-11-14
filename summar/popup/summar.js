@@ -104,10 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else if (/shein\./.test(url)) {
                         title.innerHTML = "Shein";
                     }
-                    else {
-                        title.innerHTML = "Welcome to Summar";
-                    }
-
                 });
             });
         });
