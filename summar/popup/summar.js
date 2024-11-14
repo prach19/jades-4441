@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //reference to title element
     let title = document.getElementById("title");
     //reference to content box
-    let policyContent = document.getElementById("content");
+    let policyContent = document.getElementById("content-list");
 
     //reference to data groups
     let jsonData = {};
@@ -44,25 +44,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //functionality for collection button
     collection.addEventListener("click", function () {
-        policyContent.textContent = jsonData.collection;
+        policyContent.innerHTML="";
+        let collectionContent = jsonData.collection;
+        collectionContent.forEach((policy) => {
+            let listItem = document.createElement("li"); // create a new <li> element
+            listItem.textContent = policy; // set the text content of <li>
+            policyContent.appendChild(listItem); // append <li> to the <ul>
+        });
         changeBtnColour("Collection");
     });
 
     //functionality for rights button
     rights.addEventListener("click", function () {
-        policyContent.textContent = jsonData.rights;
+        policyContent.innerHTML="";
+        let rightsContent = jsonData.rights;
+        rightsContent.forEach((policy) => {
+            let listItem = document.createElement("li"); // create a new <li> element
+            listItem.textContent = policy; // set the text content of <li>
+            policyContent.appendChild(listItem); // append <li> to the <ul>
+        });
         changeBtnColour("Rights");
     });
 
     // functionality for retention button
     retention.addEventListener("click", function () {
-        policyContent.textContent = jsonData.retention;
+        policyContent.innerHTML="";
+        let retentionContent = jsonData.retention;
+        retentionContent.forEach((policy) => {
+            let listItem = document.createElement("li"); // create a new <li> element
+            listItem.textContent = policy; // set the text content of <li>
+            policyContent.appendChild(listItem); // append <li> to the <ul>
+        });
         changeBtnColour("Retention");
     });
 
     // functionality for storage button
     storage.addEventListener("click", function () {
-        policyContent.textContent = jsonData.storage;
+        policyContent.innerHTML="";
+        let storageContent = jsonData.storage;
+        storageContent.forEach((policy) => {
+            let listItem = document.createElement("li"); // create a new <li> element
+            listItem.textContent = policy; // set the text content of <li>
+            policyContent.appendChild(listItem); // append <li> to the <ul>
+        });
         changeBtnColour("Storage");
     });
 
@@ -98,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (buttonName) {
             case "Collection":
                 collection.style.backgroundColor = darkOrange;
-
                 break;
             case "Rights":
                 rights.style.backgroundColor = darkOrange;

@@ -1,24 +1,64 @@
 [
-    {
-      "company": "Amazon",
-      "collection": "amazon collection",
-      "rights": "amazon rights",
-      "retention": "amazon retention",
-      "storage": "amazon storage"
-    },
-    {
-      "company": "Temu",
-      "collection": "temu collection",
-      "rights": "temu rights",
-      "retention": "temu retention",
-      "storage": "temu storage"
-    },
-    {
-      "company": "Shein",
-      "collection": "shein collection",
-      "rights": "shein rights",
-      "retention": "shein retention",
-      "storage": "shein storage"
-    }
-  ]
-  
+  {
+    "company": "Amazon",
+    "collection": "collection",
+    "rights": "amazon rights",
+    "retention": "amazon retention",
+    "storage": "amazon storage"
+  },
+  {
+    "company": "Temu",
+    "collection": [
+      "Account Creation & Management: Email, address, password",
+      "To Fulfill & Process Orders: Name, phone #, shipping address, financial information, IP address",
+      "Marketing, Advertising, & Other Promotional Activities: Cookies and engagement data (browsing activity, items added to cart, saved items, orders placed & returns)",
+      "Improve Services: Device information, voluntary information (body shape, height, chest/waist/hip circumference, etc.)",
+      "To Prevent & Investigate Fraud: Log-in data (browser type, device information, operating system, account setting information)",
+      "Temu may combine personal information received from the user with personal information obtained from third-party sources (data providers, affiliate partners, marketing partners, public sources, etc.)"
+    ],
+    "rights": [
+      "Users have the right to personal information collected, but this is subject to certain exemptions decided by Temu.",
+      "Can submit a request to view data collected by Temu",
+      "Can withdraw consent for Temu to use personal information, which results in Temu revoking its services",
+      "Unsubscribe from marketing communications",
+      "Right To Be Forgotten: Users may request to be de-indexed from any hyperlinks associated with the user’s name.  Likewise, users can request to be re-indexed."
+    ],
+    "retention": [
+      "Temu follows the Payment Card Industry Security Standard (CPI-DSS) in handling credit card information.",
+      "The retention period of data is based on: amount, nature, sensitivity, and potential risk of harm from unauthorized or disclosed information",
+      "When Temu no longer requires the personal information collected, users can delete, anonymize, or isolate it from further processing"
+    ],
+    "storage": [
+      "Data of Temu Canadian users are stored by default in Microsoft Azure infrastructure or a similar cloud service provider in the United States",
+      "Temu may need to engage service providers in other countries with personal data for purposes of fulfilling order",
+      "Ensures in all cases, the transfer of personal data complies with applicable legal agreements"
+    ]
+  },
+  {
+    "company": "Shein",
+    "collection": [
+      "Account Creation & Management: Email, address, password",
+      "To Fulfill & Process Orders: Name, phone #, shipping address, financial information, IP address",
+      "Communication history with SHEIN support (chat logs, email, phone #, social media, etc.)",
+      "Photographs uploaded to service according to ToS that were sent for product advice",
+      "Marketing, Advertising, & Other Promotional Activities: Cookies and engagement data (browsing activity, items added to cart, saved items, orders placed & returns)",
+      "Improve Services: Device information, voluntary information (body shape, height, chest/waist/hip circumference, etc.)",
+      "To Prevent & Investigate Fraud: Log-in data (browser type, device information, operating system, account setting information)",
+      "Profile data is collected unless the user’s account is deleted through SHEIN’s privacy centre."
+    ],
+    "rights": [
+      "Access, correct, and delete personal information within the site/app or contact SHEIN’s Privacy Center",
+      "SHEIN may NOT accommodate a request to delete or change information if the company believes it would violate any law or legal requirement",
+      "Unsubscribe from marketing communications prevents SHEIN from using your email account.",
+      "Lodging complaints"
+    ],
+    "retention": [
+      "SHEIN retrains information for “as long as necessary” for the purposes defined in their policy"
+    ],
+    "storage": [
+      "Personal data may be accessed/transferred outside of Canada to the United States, Singapore, and China",
+      "These countries have different privacy protection laws and may be able to access user information based on these laws",
+      "If users do NOT want their information transferred, processed, accessed, or maintained outside of Canada, STOP using or accessing SHEIN’s services"
+    ]
+  }
+]

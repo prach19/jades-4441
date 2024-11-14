@@ -1,97 +1,85 @@
 body {
-    min-width: 250px; /* your desired width */
-    max-width: 100%;
-    position: relative;
-    background-color: #F9F8F8;
-  }
+  min-width: 250px; /* your desired width */
+  max-width: 100%;
+  position: relative;
+  background-color: #f9f8f8;
+}
 
-  .search {
-   
-    background-color: #F9F8F8;
-    border-radius: 20px;
-   
-    position:relative;
-  }
+.search {
+  background-color: #f9f8f8;
+  border-radius: 20px;
 
-  #icon {
-    float: left;
-    display: block;
+  position: relative;
+}
 
-    padding: 5px 10px;
-    width: 10%;  
-  
-  }
-  #title {
-   
-    text-align: center;
-    padding-right: 30px;
+#icon {
+  float: left;
+  display: block;
 
-  }
-  #logo {
-    
-    display: block;
+  padding: 5px 10px;
+  width: 10%;
+}
+#title {
+  text-align: center;
+  padding-right: 30px;
+}
+#logo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;  
+  width: 50%;
   padding-top: 10px;
-  }
- .buttons {
-    height:100px;
-   width:100px;
-   font-size: 12px;
-   
-   text-align: center;
-   background-color: #EBA886;
-   border-radius: 8px;
-   border-color:  #EBA886;;
-   font-weight: bold;
-   color:#F9F8F8;
+}
+.buttons {
+  height: 100px;
+  width: 100px;
+  font-size: 12px;
 
- }
+  text-align: center;
+  background-color: #eba886;
+  border-radius: 8px;
+  border-color: #eba886;
+  font-weight: bold;
+  color: #f9f8f8;
+}
 
- #buttonIcon {
-    
-  
+#buttonIcon {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;  
- }
- .column {
- 
+  width: 50%;
+}
+.column {
   column-count: 2;
- }
- .buttonBar {
+}
+.buttonBar {
+  display: grid;
+  place-items: center;
+}
+.row {
+  padding-bottom: 5px;
+}
+.infoBar {
+  background-color: #cc7626;
+  padding: 15px 15px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 
- 
-    display: grid;
-    place-items: center;
-  
- }
- .row {
-    padding-bottom: 5px;
- }
-  .infoBar {
-  
-    background-color: #CC7626;
-    padding: 15px 15px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius:8px;
-  }
+#content-list {
+  overscroll-behavior: contain;
+  overflow: auto;
+  border-style: solid;
+  padding: 20px 20px;
+  border-color: #cc7626;
+  border-radius: 10px;
+  line-height: 15px;
+}
 
-  #content {
-    overscroll-behavior: contain;
-    overflow: auto;
-    border-style: solid;
-    padding: 20px 20px;
-    border-color: #CC7626;
-    border-radius: 10px;
-  }
+.externalLinks {
+  display: grid;
+  text-align: right;
+}
 
-  .externalLinks {
-    display: grid;
-    text-align: right;
-  }
-
-  a {
-    color: white;
-  }
+a {
+  color: white;
+}
